@@ -9,7 +9,7 @@ aws() {
     # Fetch identity
     identity=$(command aws sts get-caller-identity --output json 2>/dev/null)
     if [[ $? -ne 0 || -z "$identity" ]]; then
-        echo -e "❌ ${RED}Unable to retrieve AWS identity.${NC}"
+        echo -e "                                                            ${RED}Unable to retrieve AWS identity.${NC}"
         return 1
     fi
 
@@ -25,19 +25,17 @@ aws() {
     fi
     
     echo
-    echo -e "${RED}🔴${NC}  ACCOUNT     : ${BLUE}${account}${NC} (${source})"
-    #echo
-    #echo -e "🔍  Checking identity..."
+    echo -e "${RED}*${NC}  ACCOUNT     : ${BLUE}${account}${NC} (${source})"
     echo
-    echo -e "${YELLOW}🟡${NC}  UserId      : ${BLUE}${user_id}${NC}"
+    echo -e "${YELLOW}*${NC}  UserId      : ${BLUE}${user_id}${NC}"
     echo
-    echo -ne "${GREEN}🟢${NC}  Press Enter to continue or any key to cancel: "
+    echo -ne "${GREEN}*${NC}  Press Enter to continue or any key to cancel: "
     
     # Read single key (no Enter needed)
     IFS= read -rsn1 input
     echo
     if [[ -n "$input" ]]; then
-        echo -e "🚫 ${RED}Command cancelled.${NC}"
+        echo -e "                                                             ${RED}Command cancelled.${NC}"
         return 0
     fi
     
