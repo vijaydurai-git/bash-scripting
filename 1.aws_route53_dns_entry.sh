@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SUBDOMAIN="subdomain"
-DOMAIN="yourdomain.name"
-HOSTED_ZONE_ID="your_hosted_zone_id"
+DOMAIN="vijaydurai.fun"                          # this is mine, please update yourdomain.name
+HOSTED_ZONE_ID="your_hosted_zone_id"            
 NEW_RECORD_NAME="${SUBDOMAIN}.${DOMAIN}"
 NEW_IP_ADDRESS="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 TTL=60

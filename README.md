@@ -7,7 +7,7 @@ Each script is a separate file and can be run directly in the terminal.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/git-vijaydurai/bash-scripting.git
+   git clone https://github.com/vijaydurai-git/bash-scripting.git
    cd bash-scripting
    ```
 
